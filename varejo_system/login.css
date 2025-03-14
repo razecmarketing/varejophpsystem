@@ -1,0 +1,423 @@
+/* Login Page Styles */
+.login-page {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.login-wrapper {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-content {
+  flex: 1;
+  padding: 40px;
+  max-width: 500px;
+}
+
+.login-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.login-header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.login-header .logo i {
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.login-header .logo h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.login-header p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.login-tabs {
+  display: flex;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab.active {
+  color: var(--primary-color);
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  padding-left: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-password {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0d47a1;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.divider span {
+  background-color: white;
+  padding: 0 15px;
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.google-login {
+  text-align: center;
+}
+
+.btn-google {
+  width: 100%;
+  background-color: #ffffff;
+  color: #757575;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-google i {
+  color: #4285F4;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.btn-google:hover {
+  background-color: #f1f1f1;
+}
+
+/* Google Sign-In Button */
+.g_id_signin {
+  display: none; /* We'll use our custom button instead */
+}
+
+/* Profile Photo Upload */
+.profile-photo-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-photo-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.profile-photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-btn-wrapper input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Showcase Styles */
+.login-showcase {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-content {
+  padding: 50px 40px;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.showcase-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.showcase-content p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.showcase-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+}
+
+.feature i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.showcase-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: url('https://images.unsplash.com/photo-1556740772-1a741367b93e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Checkbox Styling */
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.checkbox-item label {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.checkbox-item label a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.checkbox-item label a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .login-wrapper {
+    flex-direction: column;
+  }
+  
+  .login-content {
+    max-width: 100%;
+  }
+  
+  .login-showcase {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-content {
+    padding: 30px 20px;
+  }
+  
+  .showcase-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .login-showcase {
+    min-height: 250px;
+  }
+  
+  .showcase-content {
+    padding: 30px 20px;
+  }
+  
+  .showcase-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .showcase-content p {
+    margin-bottom: 20px;
+  }
+}
